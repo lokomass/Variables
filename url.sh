@@ -1,10 +1,8 @@
 #!/bin/bash
-declare -A NAS
-declare -A URL
-NAS[DNS]="nas.home"
-NAS[IP]="192.168.100.150"
-URL[IP]="http://${NAS[IP]}"
-URL[DNS]="http://${NAS[DNS]}"
-URL[PROXMOX]="${URL[IP]}/proxmox"
-URL[SCRIPTS]="${URL[DNS]}/scripts"
+export NAS_DNS="nas.home"
+export NAS_IP="192.168.100.150"
+export URL_IP="http://${NAS_IP}"
+export URL_DNS="http://${NAS_DNS}"
+export URL_PROXMOX="${URL_IP}/proxmox"
+export URL_SCRIPTS="${URL_DNS}/scripts"
 
