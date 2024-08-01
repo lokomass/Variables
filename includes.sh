@@ -1,8 +1,11 @@
 #!/bin/bash
-URL="https://api.github.com/repos/lokomass/variables/contents/files"
-FILES=$(curl -s "$URL" | jq -r ".[] | .download_url")
-for FILE in $FILES
+FILES=(
+	"urls"
+	"folders"
+)
+URL="https://raw.githubusercontent.com/lokomass/variables/main/files"
+for FILE in "${FILES[@]}"
 do
-	source <(curl -s "$FILE")
+	source <(curl -s "$URL/$FILE.sh")
 done
 
