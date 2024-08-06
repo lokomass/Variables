@@ -1,5 +1,7 @@
 #!/bin/bash
 FILES=(
+	"networks"
+	"dns"
 	"urls"
 	"folders"
 )
